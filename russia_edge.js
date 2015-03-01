@@ -1,0 +1,20 @@
+(function(compId){var _=null,y=true,n=false,x8='break-word',x3='5.0.0',p='px',x9='rgba(0,0,0,0)',e18='${Stage}',x2='5.0.1',g='image',x7='Arial, Helvetica, sans-serif',l='normal',x16='none solid rgb(0, 0, 0)',x17='rgba(255,255,255,1)',x13='ubuntu-condensed, sans-serif',x6='14',xc='rgba(0,0,0,1)',x15='400',x12='ubuntu, sans-serif',x4='5.0.1.386',x='text',i='none';var g1='jquery-1.7.1.min.js',g10='russia%20copy.svg';var s11="Ya",s14="ыыыыы<br>",s5="Text";var im='images/',aud='media/',vid='media/',js='js/',fonts={'ubuntu, sans-serif':'<script src=\"http://use.edgefonts.net/ubuntu:n4,i4,n7,i7,n3,i3,n5,i5:all.js\"></script>','ubuntu-condensed, sans-serif':'<script src=\"http://use.edgefonts.net/ubuntu-condensed:n4:all.js\"></script>'},opts={'gAudioPreloadPreference':'auto','gVideoPreloadPreference':'auto'},resources=[],scripts=[js+g1],symbols={"stage":{v:x2,mv:x3,b:x4,stf:i,cg:i,rI:n,cn:{dom:[{id:'selectedPartTxt',t:x,r:['532px','-34px','242px','28px','auto','auto'],text:s5,n:[x7,[x6,p],xc,l,i,"",x8,""]},{id:'russia_copy',t:g,r:['-1px','23px','858px','583px','auto','auto'],f:[x9,im+g10,'0px','0px']},{id:'selectedPartTxt2',t:x,r:['591px','94px','242px','28px','auto','auto'],text:s11,n:[x12,[x6,p],xc,l,i,"",x8,""]},{id:'Text',t:x,r:['591px','66px','242px','28px','auto','auto'],text:s11,n:[x7,[x6,p],xc,l,i,"",x8,""]},{id:'selectedPartTxt3',t:x,r:['591px','121px','242px','28px','auto','auto'],text:s11,n:[x13,[x6,p],xc,l,i,"",x8,""]},{id:'Text7',t:x,r:['-743px','-794px','1182px','80px','auto','auto'],text:s14,align:"left",n:[x7,[x6,p],xc,x15,x16,l,x8,l]}],style:{'${Stage}':{isStage:true,r:['null','null','856px','613px','auto','auto'],zr:['0px','','',''],overflow:'hidden',f:[x17]}}},tt:{d:0,a:y,data:[["eid1","background-image",0,0,"linear",e18,[270,[['rgba(255,255,255,0.00)',0],['rgba(255,255,255,0.00)',100]]],[270,[['rgba(255,255,255,0.00)',0],['rgba(255,255,255,0.00)',100]]]]]}}};AdobeEdge.registerCompositionDefn(compId,symbols,fonts,scripts,resources,opts);})("EDGE-43901856");
+(function($,Edge,compId){var Composition=Edge.Composition,Symbol=Edge.Symbol;Edge.registerEventBinding(compId,function($){
+//Edge symbol: 'stage'
+(function(symbolName){Symbol.bindElementAction(compId,symbolName,"document","compositionReady",function(sym,e){yepnope({load:"http://cdn.edgecommons.org/an/1.0.2/js/min/EdgeCommons.js",complete:function(){var stage=sym;stage.setVariable("store",{});var selectedPartPrev;var cntr=0;EC.SVG.accessSVG(sym.$("russia_copy")).done(function(svgDocument){svgDocument.addEventListener("hover",function(event){sym.setVariable("selectedPart",event.target);var selectedPart=sym.getVariable("selectedPart");$(selectedPart).css("fill","00BCDD");if(cntr>0){$(selectedPartPrev).css("fill","B7B7B7");}
+selectedPartPrev=selectedPart;cntr++;sym.$("selectedPartTxt").html(event.target.id);if(event.target.id=="RU-KO")
+{sym.$("selectedPartTxt2").html("Республика Коми");sym.$("selectedPartTxt3").html("http://minfin.rkomi.ru/minfin_rkomi/minfin_rbudj/budjet/");}
+if(event.target.id=="RU-KEM")
+{sym.$("selectedPartTxt2").html("Республика Марий Эл");sym.$("selectedPartTxt3").html("http://mari-el.gov.ru/minfin/Pages/Budjprojekt.aspx");}
+if(event.target.id=="RU-SA")
+{sym.$("selectedPartTxt2").html("Республика Саха");sym.$("selectedPartTxt3").html("http://sakha.gov.ru/node/16970");}
+if(event.target.id=="RU-SE")
+{sym.$("selectedPartTxt2").html("Республика Северная Осетия-Алания");sym.$("selectedPartTxt3").html("http://www.mfrno-a.ru/login/otkrytyy_byudzhet.php");}
+if(event.target.id=="RU-SPE")
+{sym.$("selectedPartTxt2").html("Санкт-Петербург");sym.$("selectedPartTxt3").html("http://www.fincom.spb.ru/comfin/openbudjet/opendata.htm");}
+if(event.target.id=="RU-SAR")
+{sym.$("selectedPartTxt2").html("Саратовская область");sym.$("selectedPartTxt3").html("http://saratov.ifinmon.ru");}});});sym.setVariable("changeColor",function(color){var selectedPart=sym.getVariable("selectedPart");$(selectedPart).css("fill",color);var store=sym.getComposition().getStage().getVariable("store");store[selectedPart.id]=color;});}});});
+//Edge binding end
+})("stage");
+//Edge symbol end:'stage'
+})})(AdobeEdge.$,AdobeEdge,"EDGE-43901856");
